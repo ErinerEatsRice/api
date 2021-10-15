@@ -5,5 +5,5 @@ app.get('/', (req, res) => {
 })
 const handler = require('./handler/route.js')
 handler(app)
-app.listen(6969, () => console.log(handler(app)))
+app.listen(6969, () => console.log('API is up'))
 app.set('json spaces', 2)
