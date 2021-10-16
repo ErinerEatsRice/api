@@ -6,8 +6,8 @@ module.exports = (app) => {
     for (let files of enpoints) {
       let pull = require(`/home/runner/api/enpoints/${dir}/${files}`)
       app.get(`/${pull.name}`, (req, res) => {
-        pull.run(req, res)
-      })
+         pull.run(req, res)
+     })
     }
   })
 }

@@ -7,7 +7,7 @@ module.exports = {
      if (total === null) total = 0
       res.json({
       ram: ram,
-      request: total
+      requests: total
     })
     db.add('total', 1)
   }
