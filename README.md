@@ -1,5 +1,5 @@
 **Main File**
-```
+```js
 const express = require('express')
 const app = express()
 app.get('/', (req, res) => {
@@ -11,7 +11,7 @@ app.listen(6969, () => console.log('API is up'))
 app.set('json spaces', 2)
 ```
 **../../enpoints/fun/joke.js**
-```
+```js
 module.exports = {
    name: 'fun/joke',
    run: async (req, res) => {
