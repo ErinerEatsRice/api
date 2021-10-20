@@ -1,12 +1,16 @@
 const eightball = require('/home/runner/api/assets/fun/8ball.json')
-const db = require('quick.db')
 module.exports = {
   name: 'fun/8ball',
-  run: async (req, res) => {
+  run: async (req, res, client) => {
+    const keyV = client.db.get('key.value')
+    const key = req.query.key
+    if (!key || !key.includes(keyV)) return res.json({
+      answer: 'Denied access, no key or invalid key provided.'
+    })
     const random = eightball[Math.floor(Math.random() * eightball.length)]
     res.json({
       answer: random
     })
-    db.add('total', 1)
+    client.db.add('total', 1)
   }
 }
