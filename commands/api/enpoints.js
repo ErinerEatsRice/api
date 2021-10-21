@@ -3,9 +3,9 @@ module.exports = {
   name: 'enpoints',
   run: async (client, message, args) => {
     const enpoints = new Discord.MessageEmbed()
-        .setTitle('Title Lists')
-        .setDescription(`GET/ ${client.enpoints.filter(x => x.path != 'main').map(e => e.name).join('\nGET/ ')}`)
-        .setColor('RANDOM')
-     message.channel.send(enpoints)
+    .setTitle('Enpoints')
+    .setDescription(`GET/ ${client.enpoints.filter(x => !x.path).map(x => x.name).join('\nGET/ ')}`)
+    .setColor('RANDOM')
+   message.channel.send(enpoints)
   }
 }
