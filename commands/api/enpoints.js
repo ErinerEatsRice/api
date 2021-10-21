@@ -1,6 +1,7 @@
 const Discord = require('discord.js')
 module.exports = {
   name: 'enpoints',
+  category: 'api',
   run: async (client, message, args) => {
     const enpoints = new Discord.MessageEmbed()
     .setTitle('Enpoints')
