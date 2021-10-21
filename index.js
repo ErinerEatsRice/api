@@ -4,6 +4,7 @@ const client = new Discord.Client()
 client.commands = new Discord.Collection()
 client.aliases = new Discord.Collection()
 client.db = require('quick.db')
+client.enpoints = new Discord.Collection()
 require('./handler/cmd.js')(client)
 client.on('message', (message) => {
   if (message.author.bot || !message.guild.id) return;
@@ -34,3 +35,4 @@ app.listen(6969, () => console.log('API is up'))
 process.on('uncaughtException', (err) => {
   console.log(err.stack)
 })
+app.set('json spaces', 1)

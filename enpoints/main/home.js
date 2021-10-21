@@ -1,6 +1,7 @@
 const db = require('quick.db')
 module.exports = {
   name: 'home',
+  path: 'main',
   run: async (req, res) => {
     res.send(`
 <head>

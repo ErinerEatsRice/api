@@ -1,4 +1,3 @@
-const db = require('quick.db')
 const fetch = require('node-fetch')
 module.exports = {
   name: 'fun/joke',
@@ -9,6 +8,5 @@ module.exports = {
     res.json({
       joke: x.joke
     })   
-      db.add('total', 1)
-  }
+ }
 }
