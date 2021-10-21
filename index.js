@@ -21,7 +21,7 @@ ${error}\`\`\``)
   })
 })
 client.on('ready', () => {
-  console.log(client.user.tag)
+  console.log(`Loaded | ${client.commands.map(e => e.name).join('\nLoaded | ')}`)
 })
 client.login(process.env.token)
 const express = require('express')
