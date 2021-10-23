@@ -4,7 +4,8 @@ const client = new Discord.Client()
 client.commands = new Discord.Collection()
 client.aliases = new Discord.Collection()
 client.db = require('quick.db')
-client.enpoints = new Discord.Collection()
+client.endpoints = new Discord.Collection()
+client.config = require('./config.json')
 require('./handler/cmd.js')(client)
 client.on('message', (message) => {
   if (message.author.bot || !message.guild.id) return;
@@ -29,10 +30,13 @@ const app = express()
 const handler = require('./handler/route.js')
 handler(app, client)
 app.get('/*', (req, res) => {
-  res.send(`<meta http-equiv="refresh" content="0;url=https://api.eriner.repl.co/home" />`)
-})
+  res.send(`<meta http-equiv="refresh" content="5;url=https://api.eriner.repl.co/" />
+ <h>404 Redirecting..</h>
+`
+     )
+           })
+app.set('json spaces', 1)
 app.listen(6969, () => console.log('API is up'))
 process.on('uncaughtException', (err) => {
   console.log(err.stack)
 })
-app.set('json spaces', 1)

@@ -3,9 +3,10 @@ module.exports = {
     aliases: ['ev'],
     category: 'developer',
     run: async (client, message, args) => {
-        if (!message.author.id.toString().includes('827809019334099004')) return;
+        if (!client.config.User.DevID.includes(message.author.id)) return;
         let { inspect } = require('util')
         let code = args.join(' ')
+       if (code.includes('client.token')) return message.channel.send('no')
        try{
         const result = await eval(code)
         let output = result
