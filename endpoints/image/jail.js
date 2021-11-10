@@ -6,8 +6,8 @@ module.exports = {
     if (!av) return res.json({
       error: 'Field /image/jail?avatar= is required.'
     })
-    let bg = await Canvas.loadImage(`./jail.png`);
-        let img = await Canvas.loadImage(image);
+    let bg = await Canvas.loadImage(`${process.cwd()}/jail.png`);
+        let img = await Canvas.loadImage(av);
         const canvas = Canvas.createCanvas(400, 400);
         const ctx = canvas.getContext(`2d`);
         ctx.drawImage(img, 0, 0, 400, 400);

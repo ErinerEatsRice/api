@@ -4,7 +4,7 @@ module.exports = {
   name: 'info/stats',
   run: async (req, res, client) => {
     let total = client.db.get('total')
-     if (total === null) total = 0
+     if (!total) total = 0
       res.json({
       ram: ram,
       uptime: ms(client.uptime, { verbose: true }),

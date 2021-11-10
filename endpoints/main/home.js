@@ -10,7 +10,7 @@ module.exports = {
     <meta content="eriner.api" property="og:title" />
     <meta content="Drop Testisause api, get Eriner api." property="og:description" />
     <meta content="https://api.eriner.repl.co/home"property="og:url" />
-    <meta content="https://cdn.discordapp.com/avatars/892065748539809802/4cbccd33820c82c589951e02ed43b149.webp 
+    <meta content="https://cdn.discordapp.com/avatars/892065748539809802/4cbccd33820c82c589951e02ed43b149.png
 " property="og:image" />
     <meta content="#303236" data-react-helmet="true" name="theme-color" />
 <style>

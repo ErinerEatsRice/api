@@ -6,7 +6,7 @@ module.exports = {
     if (!av) return res.json({
       error: 'Field /image/gay?avatar= is required.'
     })
-        let bg = await Canvas.loadImage(`./gay.png`);
+        let bg = await Canvas.loadImage(`${process.cwd()}/gay.png`);
         let img = await Canvas.loadImage(av);
         const canvas = Canvas.createCanvas(480, 480);
         const ctx = canvas.getContext(`2d`);
