@@ -21,6 +21,7 @@
     "jimp": "^0.16.1",
     "quick.db": "^7.1.3",
     "relevant-urban": "^2.0.0",
-    "yourmama": "^1.0.5"
+    "yourmama": "^1.0.5",
+    "axios": "^0.24.0"
   }
 }
